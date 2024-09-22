@@ -1,0 +1,148 @@
+ 
+   
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+ 
+body{
+
+    font-family: "Poppins", sans-serif;
+    margin:0;
+
+}
+.container{
+    width:900px;
+    max-width: 90vw;
+    margin:auto;
+    text-align: center;
+    padding-top: 10px;
+    transition: all linear 0.2s;
+}
+svg{
+    width:30px;
+}
+
+header{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0;
+}
+.icon-cart{
+    position: relative;
+}
+header .icon-cart span{
+    width:30px;
+    position: absolute;
+    top: 50%;
+    right:-10px;
+    background-color: red;
+    border-radius: 50%;
+    width:20px;
+    height:20px;
+    text-align: center;
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    font-size: small;
+}
+.listProduct .item img{
+ width:90%;
+ filter: drop-shadow(0 50px 20px #0009);
+}
+
+.listProduct{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap:20px;
+}
+.listProduct .item{
+    background-color: #eeeee6;
+    padding:20px;
+}
+.listProduct .item button{
+    background-color: black;
+    color: #eeeee6;
+    padding: 5px 10px;
+    border-radius: 20px;
+    margin-top: 10px;
+    border: none;
+
+}
+.listProduct .item h2{
+    font-weight: 500;
+    font-size: large;
+}
+.cartTab {
+    width: 400px;
+    background-color: #353432;
+    position: fixed;
+    color: white;
+    inset: 0 0 0 auto;
+    display: grid;
+    grid-template-rows: 70px 1fr 70px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all linear 0.2s;
+}
+
+body.showCart .cartTab {
+    opacity: 1;
+    visibility: visible;
+ 
+}
+
+/* 
+Use body.showCart .cartTab if showCart is applied to the body.
+Use body .showCart .cartTab if showCart is applied to another element inside the body */
+
+body.showCart .container{
+    transform: translate(-250px);
+}
+ 
+.cartTab h1{
+    padding: 20px;
+    margin: 0;
+    font-weight: 300;
+}
+.cartTab .btn{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    border: none;
+    font-weight: 200;
+    padding: 10px;
+    gap:10px;
+}
+.checkout{
+    background-color: yellow;
+}
+.cartTab .listCart .item2 img{
+    width:100%;
+}
+.cartTab .listCart .item2{
+    display: grid;
+    grid-template-columns: 70px 110px 130px 1fr;
+    text-align: center;
+    align-items: center;
+}
+.listCart .quantity span{
+    
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  background-color: white;
+  border-radius: 50%;
+  color: black;
+ 
+}
+
+.listCart .quantity span:nth-child(2){
+    background-color: transparent;
+    color: white;
+}
+.listCart{
+    overflow: auto;
+}
+.listCart::-webkit-scrollbar{
+    width: 0;
+}
+
+/* ek aeisa class se map krna hoga jab woh cart wala page khula hai tbhi side ho wrna normal rahe */
